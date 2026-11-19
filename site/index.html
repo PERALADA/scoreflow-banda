@@ -1463,7 +1463,7 @@ function envInfo() {
   let inIframe = false; try { inIframe = window.self !== window.top; } catch (e) { inIframe = true; }
   return { ios, android, standalone, inApp, iosSafari, inIframe };
 }
-const APK_URL = 'https://github.com/PERALADA/scoreflow-banda/releases/latest/download/ScoreFlow.apk';
+const APK_URL = '/android';
 function checkApk() { S.apkAvailable = /Android/i.test(navigator.userAgent) && !!APK_URL; renderInstallCard(); }
 function renderInstallCard() {
   const el = $('#installCard'); if (!el) return;

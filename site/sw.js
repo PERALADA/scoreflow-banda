@@ -1,5 +1,5 @@
 /* ScoreFlow · service worker: permite abrir la app sin conexión */
-const VERSION = 'scoreflow-20261119131654';
+const VERSION = 'scoreflow-20261119134012';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './vendor/pdf.min.js', './vendor/pdf.worker.min.js',
   './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png'];
 const FONTS = 'scoreflow-fonts';
@@ -17,10 +17,11 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(req.url);
   // La página: primero la red (para recibir actualizaciones), si no hay conexión, la copia guardada
   if (req.mode === 'navigate') {
+    const isPage = url.origin === self.location.origin && (url.pathname.endsWith('/') || url.pathname.endsWith('/index.html'));
     e.respondWith(fetch(req).then(res => {
-      const copy = res.clone(); caches.open(VERSION).then(c => c.put('./index.html', copy));
+      if (isPage && res.ok && res.type === 'basic') { const copy = res.clone(); caches.open(VERSION).then(c => c.put('./index.html', copy)); }
       return res;
-    }).catch(() => caches.match('./index.html')));
+    }).catch(() => isPage ? caches.match('./index.html') : Response.error()));
     return;
   }
   // Tipografías de Google: se guardan la primera vez

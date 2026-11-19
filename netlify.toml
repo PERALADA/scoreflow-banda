@@ -1,2 +1,9 @@
 [build]
   publish = "site"
+
+# Enlace corto para descargar la app de Android
+[[redirects]]
+  from = "/android"
+  to = "https://github.com/PERALADA/scoreflow-banda/releases/latest/download/ScoreFlow.apk"
+  status = 302
+  force = true

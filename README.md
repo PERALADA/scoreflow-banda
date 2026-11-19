@@ -3,7 +3,7 @@
 App de partituras para los músicos de la banda: proyectos ilimitados, PDFs por músico, lector con scroll suave, paso de página por gesto, anotaciones, metrónomo y modo concierto.
 
 - **Web / app instalable (iPhone, iPad, ordenador):** https://moonlit-sable-cfc0c6.netlify.app
-- **Android (APK):** https://github.com/PERALADA/scoreflow-banda/releases/latest/download/ScoreFlow.apk
+- **Android (APK):** https://moonlit-sable-cfc0c6.netlify.app/android
 
 ## Estructura
 - `site/` → la web que publica Netlify (`netlify.toml` apunta aquí).
