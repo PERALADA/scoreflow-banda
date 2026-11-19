@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "ScoreFlow · Partituras de la banda",
-  "short_name": "ScoreFlow",
-  "description": "Partituras de la banda organizadas por proyectos, con lector para tablet y móvil.",
+  "name": "Banda de Jabugo · Partituras",
+  "short_name": "Banda de Jabugo",
+  "description": "Partituras de la Banda de Jabugo organizadas por proyectos, con lector para tablet y móvil.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
