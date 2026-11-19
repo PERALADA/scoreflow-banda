@@ -665,7 +665,7 @@ input[type=range]{width:100%;accent-color:var(--brass);height:28px}
 <script>
 'use strict';
 /* =====================================================================
-   ScoreFlow · Partituras de la banda
+   Banda de Jabugo · Partituras
    - Proyectos ilimitados, partituras ilimitadas por proyecto
    - Biblioteca (proyectos archivados), exportar / importar proyectos
    - Lector: scroll vertical suave nativo, deslizamiento horizontal = pasar página
@@ -1264,7 +1264,7 @@ async function exportProject(p) {
         images: imgFile && imgFile.images ? imgFile.images.map(im => ({ b64: bufToB64(im.data), w: im.w, h: im.h, type: im.type })) : null });
     }
     hideProgress();
-    await saveFile(`${slug(p.name)}.scoreflow.json`, new Blob([JSON.stringify(out)], { type: 'application/json' }));
+    await saveFile(`${slug(p.name)}.bandadejabugo.json`, new Blob([JSON.stringify(out)], { type: 'application/json' }));
   } catch (e) {
     console.error(e); hideProgress(); toast('No se pudo exportar el proyecto.');
   }
