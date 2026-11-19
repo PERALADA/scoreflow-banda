@@ -39,12 +39,54 @@
   --glass:rgba(12,15,20,.88); --glass-2:rgba(20,24,33,.94); --reader-bg:#06080b; --page-shadow:rgba(0,0,0,.8);
 }
 /* ---------- Temas de color ---------- */
+/* Temas claros */
 :root[data-theme="dia"]{
   --bg:#f5f3ee; --bg-2:#ffffff; --surface:#ffffff; --surface-2:#f2efe9; --surface-3:#e7e2d8;
   --line:#e3ddd1; --line-2:#d2cabb; --text:#1b1f27; --text-2:#454c59; --muted:#727a88;
   --brass:#b5780f; --brass-2:#946006; --brass-ink:#ffffff; --brass-soft:rgba(181,120,15,.13);
-  --danger:#d33a35; --glass:rgba(255,255,255,.9); --glass-2:rgba(255,255,255,.95); --reader-bg:#e8e5de; --page-shadow:rgba(60,50,30,.28);
-  --shadow:0 18px 40px -18px rgba(60,50,30,.35),0 2px 8px rgba(60,50,30,.12);
+  --reader-bg:#e8e5de;
+}
+:root[data-theme="marfil"]{
+  --bg:#f6efe1; --bg-2:#fffaf0; --surface:#fffaf0; --surface-2:#f2e8d3; --surface-3:#e8dabd;
+  --line:#e5d7b9; --line-2:#d5c29b; --text:#2b2418; --text-2:#5a4d37; --muted:#8a7b60;
+  --brass:#9a6914; --brass-2:#7b520a; --brass-ink:#ffffff; --brass-soft:rgba(154,105,20,.13);
+  --glass:rgba(255,250,240,.92); --glass-2:rgba(255,250,240,.96); --reader-bg:#e9ddc4;
+}
+:root[data-theme="lavanda"]{
+  --bg:#f6f3fd; --bg-2:#ffffff; --surface:#ffffff; --surface-2:#f0ebfb; --surface-3:#e3dbf7;
+  --line:#e2daf5; --line-2:#cfc2ee; --text:#251b3d; --text-2:#4f4470; --muted:#7f75a0;
+  --brass:#7656d6; --brass-2:#5d3ec2; --brass-ink:#ffffff; --brass-soft:rgba(118,86,214,.13);
+  --reader-bg:#ebe5f8;
+}
+:root[data-theme="oceano"]{
+  --bg:#f0f7fa; --bg-2:#ffffff; --surface:#ffffff; --surface-2:#e8f2f6; --surface-3:#d5e8ef;
+  --line:#d4e6ed; --line-2:#b5d3df; --text:#0f2a36; --text-2:#34525f; --muted:#668491;
+  --brass:#0d84a2; --brass-2:#086a83; --brass-ink:#ffffff; --brass-soft:rgba(13,132,162,.12);
+  --reader-bg:#e0edf2;
+}
+:root[data-theme="rosa"],:root[data-theme="corazones"]{
+  --bg:#fff4f8; --bg-2:#ffffff; --surface:#ffffff; --surface-2:#ffedf4; --surface-3:#ffdce9;
+  --line:#f7d1df; --line-2:#efb6cb; --text:#3b1d2a; --text-2:#6c4253; --muted:#a07385;
+  --brass:#d93d74; --brass-2:#bb2a5e; --brass-ink:#ffffff; --brass-soft:rgba(217,61,116,.13);
+  --reader-bg:#fde6ef;
+}
+:root[data-tone="light"]{
+  --danger:#d33a35; --page-shadow:rgba(40,30,20,.25);
+  --shadow:0 18px 40px -18px rgba(40,30,20,.35),0 2px 8px rgba(40,30,20,.12);
+}
+:root[data-tone="light"]:not([data-theme="marfil"]){--glass:rgba(255,255,255,.9); --glass-2:rgba(255,255,255,.95)}
+/* Temas oscuros */
+:root[data-theme="grafito"]{
+  --bg:#121212; --bg-2:#181818; --surface:#1e1e1e; --surface-2:#262626; --surface-3:#313131;
+  --line:#2e2e2e; --line-2:#3d3d3d; --text:#f2f2f2; --text-2:#c6c6c6; --muted:#909090;
+  --brass:#d9d9d9; --brass-2:#ffffff; --brass-ink:#121212; --brass-soft:rgba(255,255,255,.1);
+  --glass:rgba(18,18,18,.9); --glass-2:rgba(30,30,30,.95); --reader-bg:#0a0a0a;
+}
+:root[data-theme="marino"]{
+  --bg:#0b1426; --bg-2:#0f1b33; --surface:#14223f; --surface-2:#1a2b4d; --surface-3:#22365e;
+  --line:#243a63; --line-2:#2f4978; --text:#eef3fb; --text-2:#b9c6de; --muted:#8193b3;
+  --brass:#f2c066; --brass-2:#ffd889; --brass-ink:#1c1404; --brass-soft:rgba(242,192,102,.15);
+  --glass:rgba(11,20,38,.9); --glass-2:rgba(20,34,63,.95); --reader-bg:#070e1c;
 }
 :root[data-theme="verde"]{
   --bg:#0a1d14; --bg-2:#0e281c; --surface:#123124; --surface-2:#173b2b; --surface-3:#1e4835;
@@ -52,20 +94,26 @@
   --brass:#4ade80; --brass-2:#86efac; --brass-ink:#052e16; --brass-soft:rgba(74,222,128,.15);
   --glass:rgba(10,29,20,.9); --glass-2:rgba(16,40,28,.95); --reader-bg:#06140d;
 }
-:root[data-theme="rosa"],:root[data-theme="corazones"]{
-  --bg:#fff4f8; --bg-2:#ffffff; --surface:#ffffff; --surface-2:#ffedf4; --surface-3:#ffdce9;
-  --line:#f7d1df; --line-2:#efb6cb; --text:#3b1d2a; --text-2:#6c4253; --muted:#a07385;
-  --brass:#e0457b; --brass-2:#c22d63; --brass-ink:#ffffff; --brass-soft:rgba(224,69,123,.13);
-  --danger:#d33a35; --glass:rgba(255,255,255,.9); --glass-2:rgba(255,255,255,.95); --reader-bg:#fde6ef; --page-shadow:rgba(120,30,60,.25);
-  --shadow:0 18px 40px -18px rgba(120,30,60,.35),0 2px 8px rgba(120,30,60,.12);
+:root[data-theme="burdeos"]{
+  --bg:#1d0b10; --bg-2:#261018; --surface:#2f1520; --surface-2:#3a1b28; --surface-3:#482233;
+  --line:#4a2433; --line-2:#5d2f41; --text:#fbeff2; --text-2:#e2c3cc; --muted:#b08a96;
+  --brass:#e8b04b; --brass-2:#f4c870; --brass-ink:#2a1404; --brass-soft:rgba(232,176,75,.15);
+  --glass:rgba(29,11,16,.9); --glass-2:rgba(47,21,32,.95); --reader-bg:#12060a;
+}
+:root[data-theme="contraste"]{
+  --bg:#000000; --bg-2:#000000; --surface:#0b0b0b; --surface-2:#161616; --surface-3:#262626;
+  --line:#5a5a5a; --line-2:#8a8a8a; --text:#ffffff; --text-2:#ffffff; --muted:#d6d6d6;
+  --brass:#ffd600; --brass-2:#ffe74d; --brass-ink:#000000; --brass-soft:rgba(255,214,0,.2);
+  --glass:rgba(0,0,0,.96); --glass-2:rgba(0,0,0,.97); --reader-bg:#000000;
 }
 :root[data-theme="corazones"] body,:root[data-theme="corazones"] #view-reader{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M16 26c-3-5-11-4-11 3 0 5 7 9 11 13 4-4 11-8 11-13 0-7-8-8-11-3z' fill='%23f7b6cd' fill-opacity='.55'/%3E%3Cpath d='M48 58c-2-3.5-8-3-8 2 0 3.5 5 6.5 8 9.5 3-3 8-6 8-9.5 0-5-6-5.5-8-2z' fill='%23f7b6cd' fill-opacity='.45' transform='translate(0 -24)'/%3E%3C/svg%3E");
   background-size:64px 64px;
 }
-:root[data-theme="dia"] .pcard-menu,:root[data-theme="rosa"] .pcard-menu,:root[data-theme="corazones"] .pcard-menu{background:rgba(255,255,255,.85)}
-:root[data-theme="dia"] .switch i::after,:root[data-theme="rosa"] .switch i::after,:root[data-theme="corazones"] .switch i::after{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25)}
-.theme-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin-top:8px}
+:root[data-tone="light"] .pcard-menu{background:rgba(255,255,255,.85)}
+:root[data-tone="light"] .switch i::after{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.theme-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px;margin-top:8px}
+.theme-sub{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:12px 0 0}
 .theme-opt{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 6px;border-radius:12px;border:2px solid var(--line);background:var(--surface-2);font-size:12px;font-weight:600;color:var(--text-2)}
 .theme-opt[aria-pressed="true"]{border-color:var(--brass);color:var(--text)}
 .theme-opt .sw{width:44px;height:30px;border-radius:8px;border:1px solid rgba(0,0,0,.15);background:var(--sw);background-size:cover}
@@ -139,7 +187,7 @@ h1.page-title{font-family:var(--serif);font-weight:600;font-size:32px;line-heigh
 .more-list button>span:first-child{width:40px;height:40px;border-radius:11px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;color:var(--brass-2);flex:none}
 .more-list strong{display:block;font-size:14px}
 .more-list small{display:block;font-size:12px;color:var(--muted)}
-.stamp-panel{position:absolute;z-index:26;width:min(340px,calc(100vw - 12px));max-height:min(62vh,520px);display:none;flex-direction:column;background:var(--surface);border:1px solid var(--line-2);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.stamp-panel{position:absolute;z-index:26;width:min(600px,calc(100vw - 12px));max-height:calc(100% - 80px);display:none;flex-direction:column;background:var(--surface);border:1px solid var(--line-2);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
 .stamp-panel.open{display:flex}
 .stamp-panel.min .sp-search,.stamp-panel.min .sp-body,.stamp-panel.min .sp-foot{display:none}
 .stamp-panel.min [data-action="min-stamp-panel"] .ic{transform:rotate(180deg)}
@@ -148,20 +196,33 @@ h1.page-title{font-family:var(--serif);font-weight:600;font-size:32px;line-heigh
 .sp-head .grip{color:var(--muted);font-size:16px}
 .sp-head .spacer{flex:1}
 .sp-head .icon-btn{width:38px;height:38px}
-.sp-search{display:flex;align-items:center;gap:8px;margin:10px 10px 4px;height:40px;padding:0 10px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);color:var(--muted)}
+.sp-search{display:flex;align-items:center;gap:8px;margin:8px 10px 2px;height:38px;padding:0 10px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);color:var(--muted)}
 .sp-search:focus-within{border-color:var(--brass)}
 .sp-search input{flex:1;min-width:0;background:none;border:0;outline:none;color:var(--text);font-size:14px}
-.sp-body{overflow-y:auto;padding:2px 10px 8px;overscroll-behavior:contain}
-.sp-group{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 2px 6px}
-.sp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:6px}
-.sp-grid .stamp-btn{height:44px;min-width:0;padding:0 4px;font-size:15px}
-.sp-grid .stamp-btn.sym{font-size:20px}
+.sp-body{overflow-y:auto;padding:0 10px 10px;overscroll-behavior:contain}
+.sp-group{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:8px 2px 4px}
+.sp-grid{display:flex;flex-wrap:wrap;gap:5px}
+.sp-grid .stamp-btn{height:38px;min-width:40px;width:auto;padding:0 9px;font-size:14px;white-space:nowrap;flex:0 0 auto}
+.sp-grid .stamp-btn.sym{font-size:19px}
 .sp-foot{font-size:12px;color:var(--muted);padding:8px 12px;border-top:1px solid var(--line)}
 .sel-bar{position:absolute;left:50%;bottom:calc(76px + var(--sb));transform:translateX(-50%);z-index:25;display:none;align-items:center;gap:6px;padding:6px;border-radius:16px;background:var(--glass-2);border:1px solid var(--line-2);box-shadow:var(--shadow);max-width:calc(100vw - 12px);overflow-x:auto}
 .sel-bar.show{display:flex}
 .sel-label{font-size:13px;font-weight:600;padding:0 6px;white-space:nowrap;max-width:150px;overflow:hidden;text-overflow:ellipsis}
 .sel-bar .sel-del{color:var(--danger)}
 @media (max-width:520px){.sel-label{display:none}}
+@media (max-height:820px){.sp-foot{display:none}}
+@media (max-width:600px){.sp-group{display:none}.sp-grid{padding-top:6px}.sp-grid+.sp-grid{margin-top:6px;border-top:1px solid var(--line)}}
+@media (max-width:420px){.sp-grid{gap:4px}.sp-grid .stamp-btn{height:36px;min-width:36px;padding:0 7px;font-size:13px}.sp-grid .stamp-btn.sym{font-size:17px}}
+
+/* ---------- Añadir partitura (PDF / fotos / cámara) ---------- */
+.add-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 16px;align-items:stretch}
+.add-lbl{grid-column:1/-1;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.add-opt{display:flex;align-items:center;gap:10px;padding:12px;border-radius:14px;background:var(--surface);border:1px solid var(--line);text-align:left;color:var(--text);min-height:64px;transition:border-color .15s,background .15s}
+.add-opt:hover{border-color:var(--brass);background:var(--surface-2)}
+.add-opt>.ic{width:36px;height:36px;padding:8px;border-radius:10px;background:var(--brass-soft);color:var(--brass-2);flex:none;box-sizing:border-box}
+.add-opt strong{display:block;font-size:14px}
+.add-opt small{display:block;font-size:12px;color:var(--muted)}
+@media (max-width:560px){.add-opt{flex-direction:column;align-items:flex-start;gap:6px;padding:10px}.add-opt small{display:none}}
 
 /* ---------- Aviso de instalación ---------- */
 .install-card{margin-top:20px;display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:var(--r-lg);background:linear-gradient(135deg,rgba(226,166,59,.16),rgba(226,166,59,.04));border:1px solid rgba(226,166,59,.4)}
@@ -415,7 +476,7 @@ input[type=range]{width:100%;accent-color:var(--brass);height:28px}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
 </style>
-<script>try{var t=localStorage.getItem('bj-theme');if(t&&t!=='noche')document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script>try{var t=localStorage.getItem('bj-theme');if(t&&t!=='noche'){document.documentElement.dataset.theme=t;if(['dia','marfil','lavanda','oceano','rosa','corazones'].indexOf(t)>=0)document.documentElement.dataset.tone='light';}}catch(e){}</script>
 </head>
 <body>
 <!-- ===================== INICIO: PROYECTOS ===================== -->
@@ -812,17 +873,27 @@ async function setSetting(key, value) {
 }
 
 /* ---------- Estado global ---------- */
-const DEFAULT_PREFS = { edgeTaps: true, doubleTapZoom: true, stylusOnly: false, keepAwake: true, turnAnim: true, visualBeat: true, theme: 'noche', sepia: false, mag: 1.1 };
+const DEFAULT_PREFS = { edgeTaps: true, doubleTapZoom: true, stylusOnly: false, keepAwake: true, turnAnim: true, visualBeat: true, theme: 'noche', sepia: false, mag: 1.1, scanPhotos: true };
+const HEART_SW = "#fff4f8 url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M11 18c-4-3.5-8-6-8-9.5C3 5 7.5 4 11 8c3.5-4 8-3 8 .5 0 3.5-4 6-8 9.5z' fill='%23d93d74'/%3E%3C/svg%3E\") center/18px no-repeat";
 const THEMES = [
-  { id: 'dia', name: 'Día', sw: 'linear-gradient(135deg,#ffffff,#efe9dd)' },
-  { id: 'noche', name: 'Noche', sw: 'linear-gradient(135deg,#1c2230,#0c0f14)' },
-  { id: 'verde', name: 'Todo verde', sw: 'linear-gradient(135deg,#1e4835,#0a1d14)' },
-  { id: 'rosa', name: 'Rosa y blanco', sw: 'linear-gradient(135deg,#ffffff 45%,#f7a8c4)' },
-  { id: 'corazones', name: 'Corazones', sw: "#fff4f8 url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M11 18c-4-3.5-8-6-8-9.5C3 5 7.5 4 11 8c3.5-4 8-3 8 .5 0 3.5-4 6-8 9.5z' fill='%23e0457b'/%3E%3C/svg%3E\") center/18px no-repeat" },
+  { id: 'dia', name: 'Claro', tone: 'light', sw: 'linear-gradient(135deg,#ffffff 50%,#b5780f 50%)' },
+  { id: 'marfil', name: 'Marfil', tone: 'light', sw: 'linear-gradient(135deg,#fffaf0 50%,#9a6914 50%)' },
+  { id: 'lavanda', name: 'Lavanda', tone: 'light', sw: 'linear-gradient(135deg,#f6f3fd 50%,#7656d6 50%)' },
+  { id: 'oceano', name: 'Océano', tone: 'light', sw: 'linear-gradient(135deg,#f0f7fa 50%,#0d84a2 50%)' },
+  { id: 'rosa', name: 'Rosa empolvado', tone: 'light', sw: 'linear-gradient(135deg,#fff4f8 50%,#d93d74 50%)' },
+  { id: 'corazones', name: 'Corazones', tone: 'light', sw: HEART_SW },
+  { id: 'noche', name: 'Oscuro', tone: 'dark', sw: 'linear-gradient(135deg,#161b24 50%,#e2a63b 50%)' },
+  { id: 'grafito', name: 'Grafito', tone: 'dark', sw: 'linear-gradient(135deg,#1e1e1e 50%,#d9d9d9 50%)' },
+  { id: 'marino', name: 'Azul marino', tone: 'dark', sw: 'linear-gradient(135deg,#14223f 50%,#f2c066 50%)' },
+  { id: 'verde', name: 'Verde bosque', tone: 'dark', sw: 'linear-gradient(135deg,#123124 50%,#4ade80 50%)' },
+  { id: 'burdeos', name: 'Burdeos', tone: 'dark', sw: 'linear-gradient(135deg,#2f1520 50%,#e8b04b 50%)' },
+  { id: 'contraste', name: 'Alto contraste', tone: 'dark', sw: 'linear-gradient(135deg,#000000 50%,#ffd600 50%)' },
 ];
 function applyTheme(t) {
   if (!THEMES.some(x => x.id === t)) t = 'noche';
   if (t === 'noche') delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = t;
+  const th = THEMES.find(x => x.id === t);
+  if (th && th.tone === 'light') document.documentElement.dataset.tone = 'light'; else delete document.documentElement.dataset.tone;
   try { localStorage.setItem('bj-theme', t); } catch (e) { }
   const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) meta.setAttribute('content', getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() || '#0c0f14');
@@ -1063,6 +1134,7 @@ async function photoToJpeg(file, maxSide = 2600) {
   const ctx = cv.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height);
   ctx.imageSmoothingQuality = 'high'; ctx.drawImage(src, 0, 0, cv.width, cv.height);
   try { src.close && src.close(); } catch (e) { }
+  if (S.prefs.scanPhotos !== false) { try { scanEnhance(ctx, cv.width, cv.height); } catch (e) { console.warn('scan', e); } }
   const blob = await new Promise(r => cv.toBlob(r, 'image/jpeg', 0.88));
   const out = { data: await blob.arrayBuffer(), w: cv.width, h: cv.height, type: 'image/jpeg' };
   let thumb = '';
@@ -1072,6 +1144,36 @@ async function photoToJpeg(file, maxSide = 2600) {
   } catch (e) { }
   cv.width = 0;
   return { img: out, thumb };
+}
+/* Convierte la foto en una «partitura escaneada»: quita sombras y deja el papel blanco y las notas negras */
+function scanEnhance(ctx, w, h) {
+  // 1) Fondo del papel: imagen muy reducida, quedándonos con lo más claro de cada zona
+  const sw = 64, sh = Math.max(1, Math.round(64 * h / w));
+  const small = document.createElement('canvas'); small.width = sw; small.height = sh;
+  const sctx = small.getContext('2d', { willReadFrequently: true });
+  sctx.drawImage(ctx.canvas, 0, 0, sw, sh);
+  const sd = sctx.getImageData(0, 0, sw, sh), L = new Float32Array(sw * sh);
+  for (let i = 0; i < sw * sh; i++) L[i] = sd.data[i * 4] * 0.299 + sd.data[i * 4 + 1] * 0.587 + sd.data[i * 4 + 2] * 0.114;
+  const pass = (src, fn) => { const out = new Float32Array(src.length); for (let y = 0; y < sh; y++) for (let x = 0; x < sw; x++) { const v = []; for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++) { const xx = Math.min(sw - 1, Math.max(0, x + dx)), yy = Math.min(sh - 1, Math.max(0, y + dy)); v.push(src[yy * sw + xx]); } out[y * sw + x] = fn(v); } return out; };
+  const bgL = pass(pass(L, v => Math.max(...v)), v => v.reduce((a, b) => a + b, 0) / v.length);
+  for (let i = 0; i < sw * sh; i++) { const g = Math.max(40, bgL[i]); sd.data[i * 4] = sd.data[i * 4 + 1] = sd.data[i * 4 + 2] = g; sd.data[i * 4 + 3] = 255; }
+  sctx.putImageData(sd, 0, 0);
+  const big = document.createElement('canvas'); big.width = w; big.height = h;
+  const bctx = big.getContext('2d', { willReadFrequently: true }); bctx.imageSmoothingQuality = 'high';
+  bctx.drawImage(small, 0, 0, w, h);
+  const bg = bctx.getImageData(0, 0, w, h).data;
+  // 2) Normalizar cada píxel respecto al papel y subir el contraste
+  const img = ctx.getImageData(0, 0, w, h), d = img.data;
+  const lo = 95, hi = 228, k = 255 / (hi - lo);
+  for (let i = 0; i < d.length; i += 4) {
+    const lum = d[i] * 0.299 + d[i + 1] * 0.587 + d[i + 2] * 0.114;
+    let v = lum / bg[i] * 255;
+    v = (v - lo) * k;
+    v = v < 0 ? 0 : (v > 255 ? 255 : v);
+    d[i] = d[i + 1] = d[i + 2] = v;
+  }
+  ctx.putImageData(img, 0, 0);
+  big.width = 0; small.width = 0;
 }
 const isImageFile = (f) => /^image\//.test(f.type) || /\.(jpe?g|png|webp|heic|heif|gif|bmp)$/i.test(f.name);
 function photoTitle(files) {
@@ -1416,9 +1518,14 @@ function renderProject() {
       </div>
       <div class="row-actions">
         ${all.length ? `<button class="btn btn-ghost" data-action="play-project">${icon('play')}Tocar<span class="hide-sm">&nbsp;en orden</span></button>` : ''}
-        <button class="btn btn-primary" data-action="add-pdfs">${icon('file-plus')}Añadir partituras</button>
         <button class="icon-btn" data-action="project-menu" data-id="${p.id}" title="Opciones del proyecto" aria-label="Opciones del proyecto">${icon('more')}</button>
       </div>
+    </div>`;
+  html += `<div class="add-strip" role="group" aria-label="Añadir partitura">
+      <span class="add-lbl">Añadir partitura</span>
+      <button class="add-opt" data-action="add-pdf">${icon('file')}<span><strong>PDF</strong><small>Archivo del móvil</small></span></button>
+      <button class="add-opt" data-action="add-photos">${icon('image')}<span><strong>Fotos</strong><small>Se convierten en partitura</small></span></button>
+      <button class="add-opt" data-action="add-camera">${icon('camera')}<span><strong>Cámara</strong><small>Hazle una foto ahora</small></span></button>
     </div>`;
   if (parts.length > 1) {
     html += `<div class="chips" role="group" aria-label="Filtrar por parte">
@@ -1427,7 +1534,7 @@ function renderProject() {
     </div>`;
   }
   if (!all.length) {
-    html += `<div class="empty"><div class="ic-wrap">${icon('file-plus')}</div><h3>Este proyecto aún no tiene partituras</h3><p>Añade tus partituras en PDF o hazles una foto. Puedes seleccionar varios archivos a la vez${matchMedia('(pointer:fine)').matches ? ' o arrastrarlos aquí' : ''}.</p><div class="row-actions"><button class="btn btn-primary" data-action="add-pdfs">${icon('file-plus')}Añadir partituras</button></div></div>`;
+    html += `<div class="empty"><div class="ic-wrap">${icon('file-plus')}</div><h3>Este proyecto aún no tiene partituras</h3><p>Usa los botones de arriba: sube un PDF, elige fotos de la galería o hazle una foto a la partitura. Puedes seleccionar varios archivos a la vez${matchMedia('(pointer:fine)').matches ? ' o arrastrarlos aquí' : ''}.</p></div>`;
   } else {
     html += `<div class="slist">${list.map((s) => {
       const idx = all.indexOf(s);
@@ -1561,8 +1668,9 @@ async function settingsDialog() {
     <p class="sub">Se guardan en este dispositivo.</p>
     <div class="settings-group" style="border:0;margin-top:0;padding-top:0">
       <h3>Apariencia</h3>
-      <div class="theme-grid" role="group" aria-label="Color de fondo">${THEMES.map(t => `<button class="theme-opt" data-theme-id="${t.id}" aria-pressed="${S.prefs.theme === t.id}"><span class="sw" style="--sw:${t.sw.replace(/"/g, '&quot;')}"></span>${t.name}</button>`).join('')}</div>
+      ${[['light', 'Claros'], ['dark', 'Oscuros']].map(([tone, label]) => `<div class="theme-sub">${label}</div><div class="theme-grid" role="group" aria-label="Temas ${label.toLowerCase()}">${THEMES.filter(t => t.tone === tone).map(t => `<button class="theme-opt" data-theme-id="${t.id}" aria-pressed="${S.prefs.theme === t.id}"><span class="sw" style="--sw:${t.sw.replace(/"/g, '&quot;')}"></span>${t.name}</button>`).join('')}</div>`).join('')}
       ${sw('sepia', 'Filtro sepia en las partituras', 'Tono cálido y suave para la vista, como papel antiguo.')}
+      ${sw('scanPhotos', 'Convertir fotos en partitura escaneada', 'Quita sombras y deja el papel blanco y las notas negras.')}
     </div>
     <div class="settings-group">
       <h3>Perfil</h3>
@@ -1772,6 +1880,9 @@ function bindGlobal() {
       case 'project-menu': e.stopPropagation(); projectMenu(el, projectById(id)); break;
       case 'go-home': goHome(); break;
       case 'add-pdfs': e.stopPropagation(); addScoresMenu(el); break;
+      case 'add-pdf': $('#pdfInput').click(); break;
+      case 'add-photos': S.photoTarget = null; $('#imgInput').click(); break;
+      case 'add-camera': S.photoTarget = null; $('#camInput').click(); break;
       case 'part-filter': S.partFilter = el.dataset.part; renderProject(); break;
       case 'open-score': Reader.open(id); break;
       case 'score-menu': e.stopPropagation(); scoreMenu(el, scoreById(id)); break;
@@ -2909,7 +3020,11 @@ const Reader = (() => {
   function showStampPanel(on) {
     const p = $('#stampPanel'); if (!p) return;
     p.classList.toggle('open', on);
-    if (on) { renderStampPanel(); placeStampPanel(); }
+    if (on) {
+      p.classList.remove('min'); renderStampPanel(); placeStampPanel();
+      const vh = readerEl.clientHeight, need = p.scrollHeight;
+      if (R.stampPos && R.stampPos.y + need > vh - 8) placeStampPanel(R.stampPos.x, vh - need - 8);
+    }
   }
   function placeStampPanel(x, y) {
     const p = $('#stampPanel'), vw = readerEl.clientWidth, vh = readerEl.clientHeight;
@@ -2917,11 +3032,12 @@ const Reader = (() => {
     if (!pos) { try { pos = JSON.parse(localStorage.getItem('bj-stamp-pos') || 'null'); } catch (e) { pos = null; } }
     if (x != null) pos = { x, y };
     const w = p.offsetWidth || 320, h = p.offsetHeight || 300;
-    if (!pos) pos = { x: vw - w - 12, y: vh - h - 90 };
+    if (!pos) { const ab0 = $('#annotBar'); pos = { x: (vw - w) / 2, y: ab0 && ab0.offsetHeight ? ab0.offsetTop + ab0.offsetHeight + 6 : 120 }; }
     const ab = $('#annotBar'), minY = ab && ab.offsetHeight ? ab.offsetTop + ab.offsetHeight + 6 : 64;
     pos.x = clamp(pos.x, 6, Math.max(6, vw - w - 6)); pos.y = clamp(pos.y, minY, Math.max(minY, vh - 56));
     R.stampPos = pos;
     p.style.left = pos.x + 'px'; p.style.top = pos.y + 'px';
+    p.style.maxHeight = Math.max(160, vh - pos.y - 8) + 'px';
   }
   function initStampPanelDrag() {
     const head = $('#spHead'); let drag = null;

@@ -1,5 +1,5 @@
 /* Banda de Jabugo · service worker: permite abrir la app sin conexión */
-const VERSION = 'bandadejabugo-20261119192301';
+const VERSION = 'bandadejabugo-20261119192909';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './vendor/pdf.min.js', './vendor/pdf.worker.min.js',
   './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png'];
 const FONTS = 'scoreflow-fonts';
