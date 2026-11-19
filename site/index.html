@@ -1464,7 +1464,7 @@ function envInfo() {
   return { ios, android, standalone, inApp, iosSafari, inIframe };
 }
 const APK_URL = '/android';
-function checkApk() { S.apkAvailable = /Android/i.test(navigator.userAgent) && !!APK_URL; renderInstallCard(); }
+function checkApk() { S.apkAvailable = false; }
 function renderInstallCard() {
   const el = $('#installCard'); if (!el) return;
   const E = envInfo();
@@ -1472,9 +1472,9 @@ function renderInstallCard() {
   const url = location.href.split('#')[0];
   const intent = `intent://${location.host}${location.pathname}#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(url)};end`;
   let title = '', body = '', actions = '';
-  if (S.deferredInstall && !(E.android && S.apkAvailable)) {
+  if (S.deferredInstall) {
     title = 'Instala ScoreFlow en este dispositivo';
-    body = '<p>Tendrás el icono en la pantalla de inicio, se abre a pantalla completa y funciona sin internet.</p>';
+    body = '<p>Pulsa <strong>Instalar app</strong> y confirma. Aparecerá con las demás aplicaciones del móvil, se abre a pantalla completa y funciona sin internet.</p>';
     actions = `<button class="btn btn-primary" data-action="install">${icon('download')}Instalar app</button>`;
   } else if (E.android && S.apkAvailable) {
     title = 'Descarga la app de la banda';
@@ -1489,7 +1489,7 @@ function renderInstallCard() {
       actions = `<a class="btn btn-primary" href="${intent}">${icon('external')}Abrir en Chrome</a>`;
     } else {
       title = 'Instala ScoreFlow como app';
-      body = `<ol><li>Toca el menú <strong>⋮</strong> (arriba a la derecha).</li><li>Elige <strong>Instalar aplicación</strong> (o <strong>Añadir a pantalla de inicio</strong> → <strong>Instalar</strong>).</li></ol><p>¿Ves <strong>Abrir en Chrome</strong> en ese menú? Estás dentro de WhatsApp: tócalo primero, o usa este botón.</p>`;
+      body = `<ol><li>Toca el menú <strong>⋮</strong> de Chrome (arriba a la derecha).</li><li>Elige <strong>Instalar aplicación</strong> o <strong>Añadir a pantalla de inicio</strong> → <strong>Instalar</strong>.</li></ol><p>Si no estás en Chrome (por ejemplo, dentro de WhatsApp), pulsa este botón primero.</p>`;
       actions = `<a class="btn btn-ghost" href="${intent}">${icon('external')}Abrir en Chrome</a>`;
     }
   } else if (E.ios) {

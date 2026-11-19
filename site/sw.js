@@ -1,5 +1,5 @@
 /* ScoreFlow · service worker: permite abrir la app sin conexión */
-const VERSION = 'scoreflow-20261119134012';
+const VERSION = 'scoreflow-20261119135134';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './vendor/pdf.min.js', './vendor/pdf.worker.min.js',
   './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png'];
 const FONTS = 'scoreflow-fonts';
