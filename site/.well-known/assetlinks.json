@@ -1,0 +1,4 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": { "namespace": "android_app", "package_name": "es.banda.scoreflow", "sha256_cert_fingerprints": ["D5:58:28:00:C8:02:4A:6B:90:27:13:4D:A7:5B:EE:EC:84:40:F4:7C:EB:DF:9D:27:FD:95:26:6C:CA:9E:C1:72"] }
+}]

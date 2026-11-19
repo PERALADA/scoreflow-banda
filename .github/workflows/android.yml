@@ -1,0 +1,41 @@
+name: Generar APK Android
+
+on:
+  push:
+    branches: [main]
+    paths: ['android/**', '.github/workflows/android.yml']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: gradle/actions/setup-gradle@v4
+        with: { gradle-version: '8.9' }
+      - name: Preparar clave de firma
+        env: { KEYSTORE_B64: '${{ secrets.KEYSTORE_B64 }}' }
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then echo "::error::Falta el secreto KEYSTORE_B64"; exit 1; fi
+          echo "$KEYSTORE_B64" | base64 -d > android/app/release.keystore
+      - name: Compilar APK firmado
+        working-directory: android
+        env: { KEYSTORE_PASSWORD: '${{ secrets.KEYSTORE_PASSWORD }}' }
+        run: gradle :app:assembleRelease --no-daemon --stacktrace
+      - name: Renombrar
+        run: cp android/app/build/outputs/apk/release/app-release.apk ScoreFlow.apk
+      - uses: actions/upload-artifact@v4
+        with: { name: ScoreFlow-apk, path: ScoreFlow.apk }
+      - name: Publicar descarga
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk-v${{ github.run_number }}
+          name: ScoreFlow para Android (versión ${{ github.run_number }})
+          body: 'Descarga **ScoreFlow.apk**, ábrelo y pulsa Instalar.'
+          files: ScoreFlow.apk
+          make_latest: true
